@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  padding: 50px 220px;
+}
+
+#box { 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; 
+  padding: 10px 0px 20px 0px;
+}
+
+#bg-img{
+   position: absolute;
+    top: 106%;
+    left: 50%;
+    width: 350px;
+    height:300px;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    z-index: 0;
+}
+/* section-1 */
+#head-part {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px 5px;
+}
+#head-part div:nth-child(2) {
+  text-align: center;
+  color: #2E8B57;
+}
+/* table */
+table,
+th,
+td { 
+  border: 2px solid #2E8B57;
+  border-collapse: collapse;
+  padding: 0px 10px;
+}
+th {
+  font-size: 14px;
+  color: #2E8B57;
+}
+
+table th p:nth-child(1){
+  text-align: left;
+  margin-top: -20px;
+}
+table th p:nth-child(2),
+table th p:nth-child(3),
+table tbody td{
+  color: #7d7f7c;
+  margin-left: -50px;
+
+  
+}
+table th p:nth-child(2),
+table th p:nth-child(3){
+letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* tb-1 */
+.hg th {
+  height: 8vh;
+}
+
+
+/* tb-2 */
+#inner-column th {
+  font-size: 13px;
+}
+.last-cell {
+  padding-bottom: 85vh;
+  text-align: center;
+}
+
+.last-cell::before,
+.last-cell::after{
+  content:"***" ;
+  vertical-align:middle;
+  
+}
+tbody td {
+  border-bottom: none;
+}
+
+tbody tr + tr td {
+  border-top: none;
+}
+
+tbody tr:last-child td {
+  border-bottom: 2px solid #2E8B57;
+}
+tbody td{
+  font-size:15px;
+
+}
+.text-1,
+#text-2{
+  position:relative;
+  color: #7d7f7c;
+  font-size: 15px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+.text-1{
+  top: -900px;
+  left:160px ;
+
+}
+#text-2{
+  top:-335px;
+  left: 10px;
+}
+
+#seal{
+  width: 250px;
+   position:relative;
+     top:-550px;
+  left:30px ;
+}
+/* tb-3 */
+#tb-3 {
+  margin-top: 5px;
+  
+}
+#tb-3 #inner-column th {
+  font-size: 13px;
+}
+/* section-2 */
+#para p {
+  font-size: 0.7rem;
+  color:#2E8B57;
+}
+
+/* section-3 */
+#sign {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 13px;
+  gap: 120px;
+  color: #2E8B57;
+}
+
+#sign #pgh {
+  font-size: 12px;
+  margin-left: -20px;
+}
+
+#pgh p {
+  font-weight: 600;
+}
+
+
+
+table th p:nth-child(1),
+table th p:nth-child(2),
+table #col-1 p:nth-child(3),
+table tbody td{
+  font-family: 'Roboto Mono', 'Space Mono', monospace;
+
+
+}
+
+#sgn-1,
+#sgn-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+

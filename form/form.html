@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Portal – Application Form</title>
+
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Job Application</h1>
+        <p class="lead">
+          Please complete the form below. Fields marked with an asterisk are
+          required.
+        </p>
+        <form id="jobForm" action="#" method="post">
+          <div>
+            <!----------personal info----------->
+            <div class="section">
+              <strong>Personal Information</strong>
+              <div class="grid" style="margin-top: 10px">
+                <div class="form-row">
+                  <label for="name" class="required">Full name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="fullName"
+                    placeholder="Enter your name"
+                    required />
+                  <p id="err1-name" class="error-msg"></p>
+                </div>
+
+                <div class="form-row">
+                  <label for="email" class="required">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required />
+                  <p id="err2-email" class="error-msg"></p>
+                </div>
+                <div class="form-row">
+                  <label class="required">Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    pattern="[+0-9()\-\s]{7,25}"
+                    placeholder="e.g., 9876543210"
+                    required />
+                  <p id="phone-error" class="error-msg"></p>
+                </div>
+
+                <div class="form-row">
+                  <label>Date of birth</label>
+                  <input type="date" name="dob" />
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top: 10px">
+                <label class="required">Address Line 1</label>
+                <input
+                  id="address1"
+                  type="text"
+                  name="address_line1"
+                  required />
+                <p id="address1-error" class="error-msg"></p>
+              </div>
+
+              <div class="form-row" style="margin-top: 10px">
+                <label>Address Line 2</label>
+                <input type="text" name="address_line2" />
+              </div>
+
+              <div
+                class="form-row"
+                style="margin-top: 10px; display: flex; gap: 10px">
+                <div style="flex: 1">
+                  <label class="required">City</label>
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    required />
+                  <p id="city-error" class="error-msg"></p>
+                </div>
+
+                <div style="flex: 1">
+                  <label class="required">State / Region</label>
+                  <input
+                    id="state"
+                    type="text"
+                    name="state"
+                    placeholder="State / Region"
+                    required />
+                  <p id="state-error" class="error-msg"></p>
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top: 10px">
+                <label>Pincode</label>
+                <input
+                  type="text"
+                  name="pincode"
+                  placeholder="ZIP / Postal Code" >
+              </div>
+            </div>
+
+            <!-----------------education---------------->
+            <div class="section" style="margin-top: 12px">
+              <strong>Education</strong>
+
+              <div class="grid" style="margin-top: 10px">
+                <div>
+                  <label for="highest_qualification"
+                  class="required"  >Highest Qualification</label
+                  >
+                  <select
+                    id="highest_qualification"
+                    name="highest_qualification"
+                    required>
+                    <option value="">Select Qualification</option>
+                    <option>B.Sc</option>
+                    <option>B.A</option>
+                    <option>B.Com</option>
+                    <option>B.E</option>
+                    <option>B.Tech</option>
+                    <option>M.Sc</option>
+                    <option>M.A</option>
+                    <option>M.Com</option>
+                    <option>MBA</option>
+                    <option>Ph.D</option>
+                  </select>
+                  <p id="qualification-error" class="error-msg"></p>
+                </div>
+                <div>
+                  <label>Institution</label>
+                  <input
+                    id="institution"
+                    type="text"
+                    name="institution"
+                    placeholder="University / College" />
+                </div>
+              </div>
+
+              <div class="grid" style="margin-top: 10px">
+                <div>
+                  <label class="required">Year of graduation</label>
+                  <input
+                    id="gradYear"
+                    type="number"
+                    name="gradYear"
+                    min="1900"
+                    max="2100"
+                    required />
+                  <p id="year-error" class="error-msg"></p>
+                </div>
+                <div>
+                  <label for="specialization">Specialization </label>
+                  <select id="specialization" name="specialization">
+                    <option value="">Select Specialization</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics & Communication</option>
+                    <option>Electrical Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Mathematics</option>
+                    <option>Biotechnology</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!----------Work Experience-------------->
+            <div class="section" style="margin-top: 12px">
+              <strong>Work Experience</strong>
+              <div style="margin-top: 10px" class="form-row">
+                <label>Most recent employer</label>
+                <input type="text" name="employer" placeholder="Company name" />
+              </div>
+              <div class="grid" style="margin-top: 10px">
+                <div>
+                  <label>Role / Title</label>
+                  <input
+                    type="text"
+                    name="role"
+                    placeholder="e.g. Senior Developer" />
+                </div>
+                <div>
+                  <label>Duration</label>
+                  <input
+                    type="text"
+                    name="duration"
+                    placeholder="e.g. Jan 2020 — Aug 2024" />
+                </div>
+              </div>
+              <div class="form-row" style="margin-top: 10px">
+                <label>Key responsibilities / achievements</label>
+                <textarea
+                  name="responsibilities"
+                  placeholder="Briefly describe your role and achievements"></textarea>
+              </div>
+            </div>
+
+            <!------------------job details---------------->
+            <div class="section" style="margin-top: 12px">
+              <strong>Position & Job Details</strong>
+              <div style="margin-top: 10px">
+                <label for="position" class="required">Position Applying For</label>
+                <select id="position" name="position" required>
+                  <option value="">Select Position</option>
+                  <option>Software Engineer</option>
+                  <option>Frontend Developer</option>
+                  <option>Backend Developer</option>
+                  <option>Full Stack Developer</option>
+                  <option>Data Scientist</option>
+                  <option>UI/UX Designer</option>
+                  <option>Project Manager</option>
+                  <option>Business Analyst</option>
+                  <option>DevOps Engineer</option>
+                  <option>QA Tester</option>
+                </select>
+                <p id="position-error" class="error-msg"></p>
+
+                <div class="grid" style="margin-top: 10px">
+                  <div>
+                    <label>Preferred location</label>
+                    <select name="location">
+                      <option value="">-- Select --</option>
+                      <option>Remote</option>
+                      <option>Noida</option>
+                      <option>Pune</option>
+                      <option>Chennai</option>
+                      <option>Bengaluru</option>
+                      <option>Gurugram</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="grid" style="margin-top: 10px">
+                  <div>
+                    <label for="availability">Availability</label>
+                    <select id="availability" name="availability">
+                      <option value="">Select Availability</option>
+                      <option>Immediate</option>
+                      <option>15 Days</option>
+                      <option>30 Days</option>
+                      <option>45 Days</option>
+                      <option>60 Days</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="expected_salary">Expected Salary</label>
+                    <select id="expected_salary" name="expected_salary">
+                      <option value="">Select Salary Range</option>
+                      <option>₹3,00,000 - ₹5,00,000</option>
+                      <option>₹5,00,000 - ₹7,00,000</option>
+                      <option>₹7,00,000 - ₹10,00,000</option>
+                      <option>₹10,00,000 - ₹15,00,000</option>
+                      <option>₹15,00,000+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!------skills-------------->
+            <div class="section" style="margin-top: 12px">
+              <strong>Skills & Certifications</strong>
+                <div style="margin-top: 10px" class="form-row">
+                <label class="required">Skills (comma separated)</label>
+                <input
+                  id="skills"
+                  type="text"
+                  name="skills"
+                  placeholder="e.g. JavaScript, React, CSS, Testing"
+                />
+                <p id="skills-error" class="error-msg"></p>
+              </div>
+              <div class="form-row" style="margin-top: 8px">
+                <label>Relevant certifications</label>
+                <input
+                  type="text"
+                  name="certs"
+                  placeholder="e.g. AWS Certified Developer" />
+              </div>
+            </div>
+
+            <!---------------file upload------------->
+            <div class="card" style="padding: 20px">
+              <div class="form-row">
+                <label class="required">Upload Your Resume</label>
+                <div class="upload-box">
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required />
+                  <label for="resume" class="upload-label">
+                    <div class="upload-text">
+                      <img
+                        src="/images/upload-file.png"
+                        alt=""
+                        style="width: 30px; margin-left: 310px" />
+                      <strong>Browse Files</strong>
+                      <span class="small">Drag and drop files here</span>
+                    </div>
+                  </label>
+                </div>
+                <p id="resume-error" class="error-msg"></p>
+                <div class="mini">Accepted: PDF, DOCX</div>
+              </div>
+              <div class="form-row">
+                <label>Cover Letter (optional)</label>
+                <textarea
+                  name="cover"
+                  placeholder="Short cover letter / message"></textarea>
+              </div>
+            </div>
+            <!----------------submit---------------->
+            <div id="end">
+              <div class="checkbox-row">
+                <input type="checkbox" id="consent" name="consent" required />
+                <label for="consent" class="small" >
+                  I confirm that the information provided is accurate and I
+                  consent to background checks.
+                </label>
+                <p id="consent-error" class="error-msg"></p>
+              </div>
+
+              <div class="actions">
+                <button type="submit">Submit application</button>
+                <button type="reset" class="btn-outline">Reset</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/form.js"></script>
+  </body>
+</html>
