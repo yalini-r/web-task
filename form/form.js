@@ -193,20 +193,17 @@ skillsInput.addEventListener("blur", function () {
   
   //submit
 
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
-
   const isValid = validateAllFields(); 
   if (!isValid) {
+    e.preventDefault(); // stop form submission
     alert(
       "Please fill all required fields marked with an asterisk (*) and check file upload."
     );
-    
-  }else if(isValid){
+  } else {
     alert("submitted successfully");
-  }else{
-    return false;
   }
 });
 
