@@ -193,19 +193,19 @@ skillsInput.addEventListener("blur", function () {
   
   //submit
 
-const form = document.querySelector("form");
+const form = document.getElementById("jobForm");
 
 form.addEventListener("submit", function (e) {
-  const isValid = validateAllFields(); 
-  if (!isValid) {
-    e.preventDefault(); // stop form submission
-    alert(
-      "Please fill all required fields marked with an asterisk (*) and check file upload."
-    );
+
+  if (!form.checkValidity()) {
+    e.preventDefault(); 
+    alert("Please fill all required fields marked with an asterisk (*) and check file upload.");
   } else {
-    alert("submitted successfully");
+    e.preventDefault(); 
+    alert("Form submitted successfully!");
   }
 });
+
 
 
 //reset 

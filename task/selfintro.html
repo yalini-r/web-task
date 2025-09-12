@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Introduction - Yalini</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        color: #1f2937;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 100px;
+        padding:44px  60px;
+      }
+
+      .left img {
+        max-width: 220px;
+        border-radius: 25px;
+        box-shadow: 0 10px 25px rgba(31, 41, 55, 0.2);
+        background: #ffffff;
+      }
+
+      .right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 40px;
+      }
+
+      .card {
+        background: linear-gradient(145deg, #f0f0f0, #e9e9e9);
+        border-radius: 12px;
+        padding: 20px 30px;
+        margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(107, 114, 128, 0.2);
+        border: 1px solid #f0f2ff;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color:#6a6a6a;
+      }
+
+      .card p {
+        color:rgb(109, 109, 109);
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .footer {
+        margin-top: 40px;
+        background: linear-gradient(135deg, #6a6a6a, #e9e9e9);
+        color: #2b0e64;
+        text-align: center;
+        padding: 25px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        border-top: 2px solid #a855f710;
+      }
+
+      .footer h2 {
+        font-size: 24px;
+        color: #ffffff;
+      }
+
+      .footer span {
+        font-size: 20px;
+        font-weight: 500;
+        color: #6b7280;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+          padding: 40px;
+          gap: 50px;
+        }
+
+        .right {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left side image -->
+      <div class="left">
+        <img src="images/img-2.jpg" alt="Your Photo" />
+      </div>
+
+      <!-- Right side content -->
+      <div class="right">
+        <div>
+         <div class="card">
+        <h3>Personal Profile</h3>
+            <p>
+              Adaptable and motivated Java Full Stack Developer with a non-IT background, 
+              who successfully transitioned into the software development field through 
+              continuous learning and hands-on practice. Passionate about building 
+              responsive, user-friendly applications and eager to grow further with a 
+              creative and problem-solving mindset.
+            </p>
+        </div>
+
+
+          <div class="card">
+            <h3>Education</h3>
+            <p>
+              B.Sc. Biotechnology — Bon Secours College for Women, Thanjavur
+              2023 <br />
+              HSC — KBG Corp. Higher Secondary School, Madurai 2020 <br />
+              SSLC — KBG Corp. Higher Secondary School, Madurai 2018
+            </p>
+          </div>
+
+        <div class="card">
+        <h3>Skills</h3>
+        <p>
+          Core programming in Java, basics of Spring Boot and React, 
+          web development with HTML, CSS, and JavaScript, 
+          and database management with MySQL. 
+          Continuously learning and practicing problem-solving techniques.
+        </p>
+       </div>
+
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Projects</h3>
+            <p>
+              Developed a responsive Ecommerce website frontend using React with
+              cart, checkout, and search functionality. Practiced building a
+              Spring Boot banking application with layered architecture (DTO, DAO,
+              Service) to strengthen backend development skills.
+            </p>
+          </div>
+
+         <div class="card">
+          <h3>Hobbies</h3>
+          <p>
+            In my spare time, I enjoy doing pencil art, playing shuttle badminton and chess, 
+            as well as working on creative crafting works.
+          </p>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>Yalini R</h2>
+      <span>Self Introduction</span>
+    </div>
+  </body>
+</html>

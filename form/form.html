@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Job Portal – Application Form</title>
 
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="/form/form.css" />
   </head>
   <body>
     <div class="container">
@@ -106,7 +106,7 @@
                 <input
                   type="text"
                   name="pincode"
-                  placeholder="ZIP / Postal Code" >
+                  placeholder="ZIP / Postal Code" />
               </div>
             </div>
 
@@ -116,8 +116,8 @@
 
               <div class="grid" style="margin-top: 10px">
                 <div>
-                  <label for="highest_qualification"
-                  class="required"  >Highest Qualification</label
+                  <label for="highest_qualification" class="required"
+                    >Highest Qualification</label
                   >
                   <select
                     id="highest_qualification"
@@ -213,7 +213,9 @@
             <div class="section" style="margin-top: 12px">
               <strong>Position & Job Details</strong>
               <div style="margin-top: 10px">
-                <label for="position" class="required">Position Applying For</label>
+                <label for="position" class="required"
+                  >Position Applying For</label
+                >
                 <select id="position" name="position" required>
                   <option value="">Select Position</option>
                   <option>Software Engineer</option>
@@ -273,14 +275,13 @@
             <!------skills-------------->
             <div class="section" style="margin-top: 12px">
               <strong>Skills & Certifications</strong>
-                <div style="margin-top: 10px" class="form-row">
+              <div style="margin-top: 10px" class="form-row">
                 <label class="required">Skills (comma separated)</label>
                 <input
                   id="skills"
                   type="text"
                   name="skills"
-                  placeholder="e.g. JavaScript, React, CSS, Testing"
-                />
+                  placeholder="e.g. JavaScript, React, CSS, Testing" />
                 <p id="skills-error" class="error-msg"></p>
               </div>
               <div class="form-row" style="margin-top: 8px">
@@ -306,7 +307,7 @@
                   <label for="resume" class="upload-label">
                     <div class="upload-text">
                       <img
-                        src="/images/upload-file.png"
+                        src="/form/images/upload-file.png"
                         alt=""
                         style="width: 30px; margin-left: 310px" />
                       <strong>Browse Files</strong>
@@ -328,7 +329,7 @@
             <div id="end">
               <div class="checkbox-row">
                 <input type="checkbox" id="consent" name="consent" required />
-                <label for="consent" class="small" >
+                <label for="consent" class="small">
                   I confirm that the information provided is accurate and I
                   consent to background checks.
                 </label>
@@ -345,6 +346,6 @@
       </div>
     </div>
 
-    <script src="/form.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>

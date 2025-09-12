@@ -1,0 +1,227 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      background: #f0f0f0;
+      text-align: center;
+     }
+
+    /* Layout blocks */
+    header, footer{
+      background: #b0b0b0;
+      margin: 5px;
+      padding: 10px;
+    }
+     nav, section , aside , article , .topnav , .rightnav{
+      background: #cfcfcf;
+      margin: 5px;
+      padding: 10px;
+      
+     
+    }
+  /* layout-1 */
+    .layout1 section { 
+      height: 100vh;
+      width: 100vw;
+      background: #e0e0e0; 
+    }
+
+    /* layout-2 */
+  
+    .layout2 header, .layout2 footer { 
+        height: 15vh; 
+        width: 100vw;
+       
+
+    }
+    .layout2 section { 
+         height: 70vh; 
+         width: 100vw;
+        background: #e0e0e0; 
+        text-align: center;
+    }
+ 
+    /* layout-3 */
+ 
+    .layout3 header, .layout3 footer, .layout3 nav {  
+        width: 100vw;
+        height: 10vh; 
+    }
+    .layout3 section { 
+         height: 70vh; 
+        width: 100vw;
+        background: #e0e0e0; 
+    }
+
+    /* layout-4 */
+  
+    .layout4 header, .layout4 footer { 
+       height: 15vh; 
+         width: 100vw;
+          text-align: center;
+    }
+    .layout4 main { 
+        display: flex; 
+        flex: 1;
+       
+    }
+    .layout4 aside {
+         height: 70vh; 
+         width: 20vw;
+        }
+    .layout4 article { 
+        height: 70vh; 
+         width: 80vw;
+        background: #e0e0e0; 
+    }
+
+/* layout-5 */
+
+.layout5 header, .layout5 footer, .layout5 .topnav {    
+     width: 100vw;
+     height: 10vh; 
+}
+.layout5 main { 
+     display: flex;
+     flex: 1; 
+    }
+.layout5 nav { 
+    height: 70vh; 
+    width: 20vw;
+ }
+.layout5 section {
+   height: 70vh; 
+   width: 80vw;
+   background: #e0e0e0; 
+ }
+
+ /* layout-6 */
+
+.layout6 header, .layout6 footer { 
+    height:10vh;
+    width: 100vw;
+ }
+.layout6 main { 
+    display: flex; 
+    flex: 1; 
+}
+.layout6 nav { 
+    height: 80vh;
+    width: 20vw;
+ }
+.layout6 .rightnav { 
+     height: 80vh;
+    width: 10vw;
+ }
+.layout6 section { 
+    height: 80vh;
+    width:70vw;
+    background: #e0e0e0;
+ }
+
+ /* layout-7 */
+ .layout7 header, .layout7 footer, .layout7 .topnav {    
+     width: 100vw;
+     height: 10vh; 
+}
+.layout7 main { 
+    display: flex; 
+    flex: 1; 
+}
+.layout7 nav { 
+    height: 70vh;
+    width: 20vw;
+ }
+.layout7 .rightnav { 
+     height: 70vh;
+    width: 10vw;
+ }
+.layout7 section { 
+    height: 70vh;
+    width:70vw;
+    background: #e0e0e0;
+ }
+ .layout7 section { 
+    height: 70vh;
+    width:70vw;
+    background: #e0e0e0;
+ }
+
+
+/* Controls (buttons) */
+    .controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+    }
+
+    .controls a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #fff;
+      display: block;
+      transition: 0.3s;
+      color: #555 ;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /* Default position */
+    #slide1:target ~ .slider { 
+        transform: translateX(0); 
+    }
+    #slide2:target ~ .slider { 
+        transform: translateX(-100vw);
+     }
+    #slide3:target ~ .slider { 
+        transform: translateX(-200vw); 
+    }
+    #slide4:target ~ .slider { 
+        transform: translateX(-300vw);
+     }
+    #slide5:target ~ .slider {
+         transform: translateX(-400vw);
+    }
+    #slide6:target ~ .slider { 
+        transform: translateX(-500vw); 
+    }
+
+    #slide7:target ~ .slider { 
+        transform: translateX(-600vw); 
+    }
+
+    /* Highlight active button */
+
+    #slide1:target ~ .controls a[href="#slide1"],
+    #slide2:target ~ .controls a[href="#slide2"],
+    #slide3:target ~ .controls a[href="#slide3"],
+    #slide4:target ~ .controls a[href="#slide4"],
+    #slide5:target ~ .controls a[href="#slide5"],
+    #slide6:target ~ .controls a[href="#slide6"],
+    #slide7:target ~ .controls a[href="#slide7"] {
+      background: #555;
+     color: #fff;
+    }
